@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionicframework.mytabs479242" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.SplitDeal" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Keyboard">
         <param name="android-package" value="com.ionic.keyboard.IonicKeyboard" />
@@ -8,12 +8,12 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    <name>myTabs</name>
+    <name>SplitDeal</name>
     <description>
-        An Ionic Framework and Cordova project.
+        The Split Deal App.
     </description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+      Blackorchidz
     </author>
     <content src="index.html" />
     <access origin="*" />

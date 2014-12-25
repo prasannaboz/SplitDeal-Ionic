@@ -1,5 +1,20 @@
-<ion-view >
-    <ion-content class="padding">
-        <h2>Watch List</h2>
+<ion-view view-title="Watch List" ng-controller="WatchListCtrl as vm">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider item-positive item-button-right">
+                Your Watch
+                <button class="button button-light button-clear">
+                      <small>View All</small>
+                </button>
+            </div>
+            <div ng-repeat="result in vm.items | limitTo:5">
+                <a class="item item-icon-right"
+                   ng-repeat="item in result "
+                   ng-click="vm.setItemId(item.Id)">
+                    {{item.ItemName}}
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </a>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

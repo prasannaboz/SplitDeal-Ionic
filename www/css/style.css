@@ -1,1 +1,42 @@
 /* Empty. Add your own CSS if you like */
+map {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.angular-google-map-container {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.angular-google-map {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.marker-labels{
+    color:red;
+    background-color: #ffffff;
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #000000;
+    white-space: nowrap;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+
+
+
+
+
