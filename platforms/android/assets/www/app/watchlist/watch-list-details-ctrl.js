@@ -1,20 +1,21 @@
-(function(){
+(function () {
     angular.module('SplitDealApp')
-        .controller('WatchListDetailCtrl',['$stateParams','splitDealApi',WatchListDetailCtrl]);
+        .controller('WatchListDetailCtrl', ['$stateParams', 'splitDealApi', WatchListDetailCtrl]);
 
-    function WatchListDetailCtrl($stateParams,splitDealApi){
+    function WatchListDetailCtrl($stateParams, splitDealApi) {
 
         var vm = this;
-
-        console.log("$stateParams",$stateParams);
-
+        //console.log("$stateParams", $stateParams);
         vm.itemId = $stateParams.id;
 
-        splitDealApi.getMyWatchList().then(function (data) {
-            vm.items = data;
+        //console.log("Item Id", vm.itemId);
 
-            var item = _.chain(vm.items.Items)
-                        .find("id")
+        splitDealApi.getMyWatchList().then(function (data) {
+
+            vm.itemDetail = _(data.Result).chain()
+                            .find({'Id':vm.itemId})
+                            .pick('ItemDescription','Location','ItemName','ModifiedAt')
+                            .value();
         });
     }
 

@@ -38,6 +38,7 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\ind
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\plugins \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\app.js \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\directives \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\favourite \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\layout \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\mydeals \
@@ -45,6 +46,7 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\services \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\settings \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\watchlist \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\directives\directives.js \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\favourite\favourite.html \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\layout\tabs.html \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\mydeals\mydeals.html \
@@ -59,6 +61,7 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\watchlist\watchlist.html \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\css\style.css \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\img\ionic.png \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\img\sd-logo.PNG \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-animate \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-google-maps \

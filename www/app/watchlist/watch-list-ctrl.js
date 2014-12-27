@@ -13,7 +13,8 @@
         vm.setItemId = function (itemId) {
             splitDealApi.setItemId(itemId);
             $state.go('tab.watch-list-details');
-            //console.log("Item Id", itemId);
+
+            console.log("Item Id", itemId);
         };
     };
 })();

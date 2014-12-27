@@ -1,21 +1,21 @@
-(function(){
-    'use strict';
+(function () {
 
-    angular.module('SplitDealApp').controller('NearMeCtrl',[NearMeCtrl]);
+    angular.module('SplitDealApp').controller('NearMeCtrl', ['$ionicLoading', NearMeCtrl]);
 
-    function NearMeCtrl(){
-        var vm = this;
+    function NearMeCtrl($scope, $ionicLoading) {
 
-        vm.map = {
-            center:{
-                latitude:38.897677,
-                longitude: -77.036530
-            },
-            zoom:12
+        $scope.mapCreated = function (map) {
+            $scope.map = map;
+
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                console.log('Got pos', pos);
+                $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+                $scope.loading.hide();
+            }, function (error) {
+                alert('Unable to get location: ' + error.message);
+            });
+            console.log("mapCreated is executed");
         };
-
-        vm.marker = {}
-        console.log("Near Map Executed");
     };
 
 })();

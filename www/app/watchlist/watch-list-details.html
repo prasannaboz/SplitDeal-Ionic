@@ -1,5 +1,23 @@
 <ion-view view-title="Watch list Details" ng-controller="WatchListDetailCtrl as vm">
     <ion-content class="padding">
-        <h2>Watchlist Details</h2>
+
+        <div class="list card" ng-model="vm.itemDetail">
+
+            <div class="item ">
+                <h2>{{vm.itemDetail.ItemName}}</h2>
+
+                <p>Location: {{vm.itemDetail.Location}}</p>
+
+                <p>{{vm.itemDetail.ModifiedAt | date:'medium'}}</p>
+            </div>
+
+            <div class="item item-body">
+                <p>
+                    Description: {{vm.itemDetail.ItemDescription}}
+                </p>
+            </div>
+
+        </div>
+
     </ion-content>
 </ion-view>

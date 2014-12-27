@@ -5,16 +5,17 @@
     function WatchListDetailCtrl($stateParams, splitDealApi) {
 
         var vm = this;
+        //console.log("$stateParams", $stateParams);
+        vm.itemId = $stateParams.id;
 
-        console.log("$stateParams", $stateParams);
-
-        vm.itemId = $stateP;
-
-        console.log(vm.itemId);
+        //console.log("Item Id", vm.itemId);
 
         splitDealApi.getMyWatchList().then(function (data) {
 
-
+            vm.itemDetail = _(data.Result).chain()
+                            .find({'Id':vm.itemId})
+                            .pick('ItemDescription','Location','ItemName','ModifiedAt')
+                            .value();
         });
     }
 

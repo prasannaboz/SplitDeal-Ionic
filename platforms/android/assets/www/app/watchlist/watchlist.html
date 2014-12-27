@@ -1,19 +1,39 @@
-<ion-view view-title="Watch List" ng-controller="WatchListCtrl as vm">
+<ion-view ng-controller="WatchListCtrl as vm">
+    <ion-nav-title>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+            </label>
+            <a class="button button-clear icon-right ion-ios7-barcode button-stable"></a>
+        </div>
+    </ion-nav-title>
+
     <ion-content>
+        <div>
+            <img src="../img/sd-logo.PNG" height="40px" style="margin: auto;width: 70%;display: block;">
+        </div>
         <div class="list">
             <div class="item item-divider item-positive item-button-right">
                 Your Watch
                 <button class="button button-light button-clear">
-                      <small>View All</small>
+                    <small>View All</small>
                 </button>
             </div>
-            <div ng-repeat="result in vm.items | limitTo:5">
+            <div ng-repeat="result in vm.items">
                 <a class="item item-icon-right"
-                   ng-repeat="item in result "
-                   ng-click="vm.setItemId(item.Id)">
-                    {{item.ItemName}}
+                   ng-repeat="item in result"
+                   ui-sref="tab.watch-list-details({id: item.Id})">
+                    {{item.ItemName}} ({{item.Location}})
                     <i class="icon ion-chevron-right icon-accessory"></i>
                 </a>
+            </div>
+
+            <div class="item item-divider item-positive item-button-right">
+                My Listing
+                <button class="button button-light button-clear">
+                    <small>View All</small>
+                </button>
             </div>
         </div>
     </ion-content>
