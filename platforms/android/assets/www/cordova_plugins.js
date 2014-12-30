@@ -13,6 +13,20 @@ module.exports = [
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
+        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -20,7 +34,9 @@ module.exports.metadata =
 {
     "com.ionic.keyboard": "1.0.3",
     "org.apache.cordova.console": "0.2.12",
-    "org.apache.cordova.device": "0.2.13"
+    "org.apache.cordova.device": "0.2.13",
+    "com.phonegap.plugins.barcodescanner": "2.0.1",
+    "org.apache.cordova.inappbrowser": "0.5.5-dev"
 }
 // BOTTOM OF METADATA
 });

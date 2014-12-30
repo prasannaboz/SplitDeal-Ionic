@@ -1,10 +1,24 @@
 (function () {
     'use strict';
     angular.module('SplitDealApp')
-        .controller('WatchListCtrl', ['$state', 'splitDealApi', WatchListCtrl]);
+        .controller('WatchListCtrl', ['$scope','$state', 'splitDealApi','$cordovaBarcodeScanner', WatchListCtrl]);
 
-    function WatchListCtrl($state, splitDealApi) {
+    function WatchListCtrl($scope,$state, splitDealApi,$cordovaBarcodeScanner) {
         var vm = this;
+
+        $scope.scan = function () {
+
+            $cordovaBarcodeScanner.scan()
+                .then(function (result) {
+
+                    //alert(result.text);
+                    $scope.scanResult = result;
+
+                }, function (err) {
+                    var scanResult = 'SCAN ERROR (see console)';
+                    console.error(err);
+                });
+        };
 
         splitDealApi.getMyWatchList().then(function (data) {
             vm.items = data;

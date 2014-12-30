@@ -1,4 +1,4 @@
-angular.module('SplitDealApp', ['ionic'])
+angular.module('SplitDealApp', ['ionic','ngCordova'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -19,20 +19,32 @@ angular.module('SplitDealApp', ['ionic'])
         $stateProvider
 
             // setup an abstract state for the tabs directive
+
+            .state('app', {
+                url: '/app/login',
+                templateUrl: 'app/login/login.html'
+
+            })
+
+            .state('signup', {
+                url: '/app/signup',
+                templateUrl: 'app/signup/signup.html'
+
+            })
+
             .state('tab', {
                 url: "/tab",
                 abstract: true,
                 templateUrl: "app/layout/tabs.html"
             })
 
-            // Each tab has its own nav history stack:
 
+            // Each tab has its own nav history stack:
             .state('tab.watchlist', {
                 url: '/watchlist',
                 views: {
                     'tab-watchlist': {
                         templateUrl: 'app/watchlist/watchlist.html'
-
                     }
                 }
             })
@@ -49,7 +61,6 @@ angular.module('SplitDealApp', ['ionic'])
                 views: {
                     'tab-mydeals': {
                         templateUrl: 'app/mydeals/mydeals.html'
-
                     }
                 }
             })
@@ -58,7 +69,6 @@ angular.module('SplitDealApp', ['ionic'])
                 views: {
                     'tab-nearme': {
                         templateUrl: 'app/nearme/nearme.html'
-
                     }
                 }
             })
@@ -67,7 +77,6 @@ angular.module('SplitDealApp', ['ionic'])
                 views: {
                     'tab-favourite': {
                         templateUrl: 'app/favourite/favourite.html'
-
                     }
                 }
             })
@@ -76,13 +85,13 @@ angular.module('SplitDealApp', ['ionic'])
                 views: {
                     'tab-settings': {
                         templateUrl: 'app/settings/settings.html'
-
                     }
                 }
             });
 
 
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/watchlist');
+        $urlRouterProvider.otherwise('/app/login');
+
 
     });

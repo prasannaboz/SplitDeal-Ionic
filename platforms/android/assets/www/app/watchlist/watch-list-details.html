@@ -1,4 +1,14 @@
-<ion-view view-title="Watch list Details" ng-controller="WatchListDetailCtrl as vm">
+<ion-view ng-controller="WatchListDetailCtrl as vm">
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-chevron-left"></i> Back
+        </ion-nav-back-button>
+        <ion-nav-title>
+            <a class="button button-clear ion-ios7-location-outline"> map view </a>
+        </ion-nav-title>
+    </ion-nav-bar>
+
+
     <ion-content class="padding">
 
         <div class="list card" ng-model="vm.itemDetail">

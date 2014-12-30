@@ -1,0 +1,42 @@
+<ion-view ng-controller="LoginCtrl">
+    <ion-nav-title>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+            </label>
+            <a class="button button-clear icon-right ion-ios7-barcode button-stable"></a>
+        </div>
+    </ion-nav-title>
+    <ion-content>
+        <div>
+            <img src="http://localhost:8100/img/sd-logo.PNG" style=" margin: auto;width: 200px;display: block;">
+        </div>
+        <div class="list">
+            <div class="item item-divider item-positive">
+                Login
+            </div>
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="username" ng-model="userName"><br/>
+
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="password" ng-model="userPassword">
+            </label>
+            <button class="button button-positive button-block" ng-click="userLogin(userName,userPassword)">
+                Sign In
+            </button>
+
+            <div class="item item-divider">
+                Don't have an account?
+            </div>
+
+            <a class="button button-balanced button-block" href="#/app/signup">
+                Sign Up
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

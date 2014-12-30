@@ -3,16 +3,13 @@
         <div class="bar bar-header item-input-inset">
             <label class="item-input-wrapper">
                 <i class="icon ion-ios7-search placeholder-icon"></i>
-                <input type="search" placeholder="Search">
+                <input type="search" placeholder="Search"  value="{{scanResult.text}}">
             </label>
-            <a class="button button-clear icon-right ion-ios7-barcode button-stable"></a>
+            <a class="button button-clear icon-right ion-ios7-barcode button-stable" ng-click="scan()"></a>
         </div>
     </ion-nav-title>
 
     <ion-content>
-        <div>
-            <img src="../img/sd-logo.PNG" height="40px" style="margin: auto;width: 70%;display: block;">
-        </div>
         <div class="list">
             <div class="item item-divider item-positive item-button-right">
                 Your Watch
