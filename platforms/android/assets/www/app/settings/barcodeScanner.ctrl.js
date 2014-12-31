@@ -2,7 +2,7 @@
     'use strict';
     angular.module('SplitDealApp')
         .controller('BarcodeScannerCtrl',
-        ['$scope', '$cordovaBarcodeScanner','$cordovaOauth', BarcodeScannerCtrl]);
+        ['$scope', '$cordovaBarcodeScanner', '$cordovaOauth', BarcodeScannerCtrl]);
 
     function BarcodeScannerCtrl($scope, $cordovaBarcodeScanner, $cordovaOauth) {
         var vm = this;
@@ -22,12 +22,16 @@
 
         //oauth
         $scope.googleLogin = function () {
-            $cordovaOauth.google("53403813997-elrk3c92ku9vt0gq8h40g2a5a4k4evmk.apps.googleusercontent.com", ["https://www.googleapis.com/auth/urlshortener", "https://www.googleapis.com/auth/userinfo.email"]).then(function (result) {
-                $scope.oauthResult = result;
-            }, function (error) {
-                $scope.oauthResult = "OAUTH ERROR (see console)";
-                console.log(error);
-            });
+            $cordovaOauth.google("53403813997-23amgkdaart0ddsmatqevtt5dv56luh0.apps.googleusercontent.com",
+                ["oauth2:https://www.googleapis.com/auth/plus.me",
+                    "https://www.googleapis.com/auth/userinfo.profile"])
+                .then(function (result) {
+                    console.log("Oauth Result=", result)
+                    $scope.oauthResult = result;
+                }, function (error) {
+                    $scope.oauthResult = "OAUTH ERROR (see console)";
+                    console.log(error);
+                });
         };
 
     };

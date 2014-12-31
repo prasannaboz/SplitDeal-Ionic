@@ -1,0 +1,17 @@
+<ion-view ng-controller="LocationMapCtrl as vm">
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-chevron-left"></i> Back
+        </ion-nav-back-button>
+        <ion-nav-title>
+            Location Map
+        </ion-nav-title>
+    </ion-nav-bar>
+
+    <ion-content padding scroll="false">
+        <ui-gmap-google-map  draggable="true" center="vm.map.center" zoom="vm.map.zoom">
+            <ui-gmap-marker coords="vm.marker" idkey="0"> </ui-gmap-marker>
+        </ui-gmap-google-map>
+    </ion-content>
+    
+</ion-view>

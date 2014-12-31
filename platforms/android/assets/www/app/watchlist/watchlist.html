@@ -17,9 +17,8 @@
                     <small>View All</small>
                 </button>
             </div>
-            <div ng-repeat="result in vm.items">
+            <div ng-repeat="item in vm.items | limitTo:5">
                 <a class="item item-icon-right"
-                   ng-repeat="item in result"
                    ui-sref="tab.watch-list-details({id: item.Id})">
                     {{item.ItemName}} ({{item.Location}})
                     <i class="icon ion-chevron-right icon-accessory"></i>
