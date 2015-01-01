@@ -25,6 +25,9 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\clas
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\com\SplitDeal\R$string.class \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\com\SplitDeal\R$xml.class \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\com\SplitDeal\R.class \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\org\apache\cordova\camera\CameraLauncher.class \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\org\apache\cordova\camera\ExifHelper.class \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\org\apache\cordova\camera\FileHelper.class \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\org\apache\cordova\device\Device.class \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$1.class \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$2.class \

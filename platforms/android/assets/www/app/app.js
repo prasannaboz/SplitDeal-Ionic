@@ -1,4 +1,4 @@
-angular.module('SplitDealApp', ['ionic','ngCordova'])
+angular.module('SplitDealApp', ['ionic','ngCordova','uiGmapgoogle-maps'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -32,6 +32,12 @@ angular.module('SplitDealApp', ['ionic','ngCordova'])
 
             })
 
+            .state('location-map', {
+                url: '/app/location-map/:id',
+                templateUrl: 'app/nearme/location-map.html'
+
+            })
+
             .state('tab', {
                 url: "/tab",
                 abstract: true,
@@ -56,6 +62,15 @@ angular.module('SplitDealApp', ['ionic','ngCordova'])
                     }
                 }
             })
+            .state('tab.location-map', {
+                url: "/watchlist/location/:id",
+                views: {
+                    'tab-watchlist': {
+                        templateUrl: "app/nearme/location-map.html"
+                    }
+                }
+            })
+
             .state('tab.mydeals', {
                 url: '/mydeals',
                 views: {

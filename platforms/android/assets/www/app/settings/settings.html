@@ -1,6 +1,7 @@
 <ion-view title="Barcode" ng-controller="BarcodeScannerCtrl">
 
     <ion-content scroll="false" padding="true">
+
         <button ng-click="scan()" class="button button-block button-primary">Scan</button>
         <div class="card">
             <div class="item item-divider">Barcode Results</div>
@@ -9,9 +10,10 @@
             <div class="item">Cancelled: {{scanResult.cancelled}}</div>
         </div>
 
-        <button ng-click="googleLogin()" class="button button-block button-primary">Google</button>
+        <button ng-click="googleLogin()" class="button button-block button-primary">Sign up with Google</button>
 
         <div ng-bind="oauthResult"></div>
+
 
     </ion-content>
 </ion-view>

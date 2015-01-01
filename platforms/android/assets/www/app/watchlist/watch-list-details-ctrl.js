@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
     angular.module('SplitDealApp')
         .controller('WatchListDetailCtrl', ['$stateParams', 'splitDealApi', WatchListDetailCtrl]);
 

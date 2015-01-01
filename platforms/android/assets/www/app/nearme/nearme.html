@@ -1,5 +1,10 @@
-<ion-view view-title="Near Me" ng-controller="NearMeCtrl">
+<ion-view view-title="Near Me" ng-controller="NearMeCtrl as vm">
     <ion-content padding scroll="false">
-        <map on-create="mapCreated(map)"></map>
+        <ui-gmap-google-map
+                draggable="true"
+                center="vm.map.center"
+                zoom="vm.map.zoom">
+        </ui-gmap-google-map>
+
     </ion-content>
 </ion-view>

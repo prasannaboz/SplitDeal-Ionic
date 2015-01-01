@@ -17,10 +17,10 @@
                     <small>View All</small>
                 </button>
             </div>
-            <div ng-repeat="item in vm.items | limitTo:5">
+            <div ng-repeat="item in vm.items">
                 <a class="item item-icon-right"
                    ui-sref="tab.watch-list-details({id: item.Id})">
-                    {{item.ItemName}} ({{item.Location}})
+                    {{item.ItemName}}
                     <i class="icon ion-chevron-right icon-accessory"></i>
                 </a>
             </div>
