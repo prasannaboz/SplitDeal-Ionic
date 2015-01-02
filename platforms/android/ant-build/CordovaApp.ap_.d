@@ -145,7 +145,6 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\nearme\location-map.html \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\nearme\near-me-ctrl.js \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\nearme\nearme.html \
-C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\services\eliteApi.js \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\services\splitDealApi.js \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\settings\barcodeScanner.ctrl.js \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\app\settings\settings.html \
@@ -159,6 +158,7 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\img
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\img\sd-logo.PNG \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-animate \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-google-maps \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-sanitize \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-ui-router \
@@ -179,6 +179,16 @@ C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-animate\bower.json \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-animate\package.json \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-animate\README.md \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\bower.json \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\CHANGELOG.md \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\circle.yml \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\dist \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\LICENSE \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\README.md \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\TRANSITION.md \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\dist\angular-cache.js \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\dist\angular-cache.min.js \
+C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-cache\dist\angular-cache.min.map \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-google-maps\bower.json \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-google-maps\circle.yml \
 C:\Users\mkale\Documents\GitHub\SplitDeal-Ionic\platforms\android\assets\www\lib\angular-google-maps\clean \

@@ -32,9 +32,6 @@
                 options: {
                     title: 'This is marker with specific lat long',
                     animation:google.maps.Animation.BOUNCE,
-                    label:'hello marker',
-                    content:'Hi Marker',
-                    anchor:'10 -8'
                 },
                 showWindow: true
             };

@@ -33,10 +33,9 @@
 
             if (myWatchlistData) {
                 console.log("Found data inside cache", myWatchlistData);
+                $ionicLoading.show({template: 'Loading...'});
                 deferred.resolve(myWatchlistData);
             } else {
-
-                $ionicLoading.show({template: 'Loading...'});
 
                 $http.get("http://api.everlive.com/v1/IMregDJC77R1b1yM/Items/")
                     .success(function (data) {

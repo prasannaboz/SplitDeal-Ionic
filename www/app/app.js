@@ -23,12 +23,17 @@ angular
         });
     })
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+        $ionicConfigProvider.views.maxCache(10);
+
+        // note that you can also chain configs
+        $ionicConfigProvider.backButton.icon('ion-chevron-left');
+        $ionicConfigProvider.tabs.position('bottom').style('standard');
+
 
         $stateProvider
-
             // setup an abstract state for the tabs directive
-
             .state('app', {
                 url: '/app/login',
                 templateUrl: 'app/login/login.html'
@@ -113,7 +118,7 @@ angular
                 }
             });
 
-
+        
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/app/login');
 

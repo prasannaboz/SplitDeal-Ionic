@@ -27,5 +27,5 @@
 
             console.log("Item Id", itemId);
         };
-    };
+    }
 })();
