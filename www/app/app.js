@@ -16,7 +16,7 @@ angular
 
             DSCacheFactory("myWatchListCache", {
                 storageMode: "localStorage",
-                maxAge: 5000,
+                maxAge: 7000,
                 deleteOnExpire: "aggressive"
             });
             DSCacheFactory("staticCache", {storageMode: "localStorage"});
@@ -25,10 +25,16 @@ angular
 
     .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
-        $ionicConfigProvider.views.maxCache(10);
+        $ionicConfigProvider.views.maxCache(5);
+        $ionicConfigProvider.views.transition('ios');
+        $ionicConfigProvider.views.forwardCache(true);
+
+        $ionicConfigProvider.navBar.positionPrimaryButtons('left');
+        $ionicConfigProvider.navBar.positionSecondaryButtons('right');
+        $ionicConfigProvider.navBar.alignTitle('center');
 
         // note that you can also chain configs
-        $ionicConfigProvider.backButton.icon('ion-chevron-left');
+        $ionicConfigProvider.backButton.text('back').icon('ion-chevron-left');
         $ionicConfigProvider.tabs.position('bottom').style('standard');
 
 
@@ -85,11 +91,11 @@ angular
                 }
             })
 
-            .state('tab.mydeals', {
-                url: '/mydeals',
+            .state('tab.post', {
+                url: '/post',
                 views: {
-                    'tab-mydeals': {
-                        templateUrl: 'app/mydeals/mydeals.html'
+                    'tab-post': {
+                        templateUrl: 'app/post/post.html'
                     }
                 }
             })
@@ -118,7 +124,7 @@ angular
                 }
             });
 
-        
+
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/app/login');
 

@@ -23,12 +23,17 @@ angular
         });
     })
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+        $ionicConfigProvider.views.maxCache(10);
+
+        // note that you can also chain configs
+        $ionicConfigProvider.backButton.icon('ion-chevron-left');
+        $ionicConfigProvider.tabs.position('bottom').style('standard');
+
 
         $stateProvider
-
             // setup an abstract state for the tabs directive
-
             .state('app', {
                 url: '/app/login',
                 templateUrl: 'app/login/login.html'
@@ -80,11 +85,11 @@ angular
                 }
             })
 
-            .state('tab.mydeals', {
-                url: '/mydeals',
+            .state('tab.post', {
+                url: '/post',
                 views: {
                     'tab-mydeals': {
-                        templateUrl: 'app/mydeals/mydeals.html'
+                        templateUrl: 'app/post/post.html'
                     }
                 }
             })

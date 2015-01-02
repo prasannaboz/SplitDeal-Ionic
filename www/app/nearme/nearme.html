@@ -1,5 +1,28 @@
-<ion-view view-title="Near Me" ng-controller="NearMeCtrl as vm">
-    <ion-content padding scroll="false">
+<ion-view  ng-controller="NearMeCtrl as vm">
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-chevron-left"></i> back
+        </ion-nav-back-button>
+
+        <ion-nav-title>
+            <a class="button button-clear ion-navicon-round">
+                List View</a>
+        </ion-nav-title>
+
+        <ion-nav-buttons side="secondary">
+            <button class="button button-clear" ng-click="doSomething()">
+                Refine
+            </button>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <ion-content  scroll="false">
+        <div class="item item-divider item-positive item-button-right">
+            Deals near me
+            <button class="button button-light button-clear">
+                <small>0 found </small>
+            </button>
+        </div>
         <ui-gmap-google-map
                 draggable="true"
                 center="vm.map.center"

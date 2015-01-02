@@ -1,18 +1,30 @@
 <ion-view ng-controller="WatchListDetailCtrl as vm">
-    <ion-nav-bar>
-        <ion-nav-back-button class="button-clear">
-            <i class="ion-chevron-left"></i> Back
-        </ion-nav-back-button>
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button></ion-nav-back-button>
         <ion-nav-title>
-            <a class="button button-clear ion-ios7-location-outline" ui-sref="tab.location-map({id:vm.itemId})"> map view </a>
+            <a class="button button-clear ion-ios7-location-outline"
+               ui-sref="tab.location-map({id:vm.itemId})">
+                Map View </a>
         </ion-nav-title>
     </ion-nav-bar>
 
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear" ng-click="doSomething()">
+            Refine
+        </button>
+    </ion-nav-buttons>
 
-    <ion-content class="padding">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider item-positive item-button-right">
+                Result for
+                <button class="button button-light button-clear">
+                    <small>4 found | sort </small>
+                </button>
+            </div>
+        </div>
 
         <div class="list card" ng-model="vm.itemDetail">
-
             <div class="item ">
                 <h2>{{vm.itemDetail.ItemName}}</h2>
 
@@ -20,13 +32,20 @@
 
                 <p>{{vm.itemDetail.ModifiedAt | date:'medium'}}</p>
             </div>
-
             <div class="item item-body">
-                <p>
-                    Description: {{vm.itemDetail.ItemDescription}}
-                </p>
+                <p>Description: {{vm.itemDetail.ItemDescription}}</p>
             </div>
+        </div>
 
+        <div class="list">
+            <div class="item item-divider item-stable item-button-right">
+                Set up Alert
+            </div>
+            <div class="item item-divider item-positive item-button-right">Other Web Site</div>
+            <a class="item item-icon-right">
+                Kijiji
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
         </div>
 
     </ion-content>

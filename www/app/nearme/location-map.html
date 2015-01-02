@@ -1,14 +1,30 @@
 <ion-view ng-controller="LocationMapCtrl as vm">
     <ion-nav-bar>
         <ion-nav-back-button class="button-clear">
-            <i class="ion-chevron-left"></i> Back
+            <i class="ion-chevron-left"></i> back
         </ion-nav-back-button>
+
         <ion-nav-title>
-            Location Map
+            <a class="button button-clear ion-navicon-round">
+                List View</a>
         </ion-nav-title>
+
+        <ion-nav-buttons side="secondary">
+            <button class="button button-clear" ng-click="doSomething()">
+                Refine
+            </button>
+        </ion-nav-buttons>
     </ion-nav-bar>
 
-    <ion-content padding scroll="false">
+    <ion-content  scroll="false">
+
+            <div class="item item-divider item-positive item-button-right">
+                Result for
+                <button class="button button-light button-clear">
+                    <small>4 found </small>
+                </button>
+            </div>
+
         <ui-gmap-google-map  draggable="true" center="vm.map.center" zoom="vm.map.zoom">
             <ui-gmap-marker
                     coords="vm.marker"
