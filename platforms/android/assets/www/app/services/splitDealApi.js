@@ -32,8 +32,8 @@
                 myWatchlistData = self.myWatchListCache.get(cachekey);
 
             if (myWatchlistData) {
+                $ionicLoading.show({template: 'Loading...',duration:1000});
                 console.log("Found data inside cache", myWatchlistData);
-                $ionicLoading.show({template: 'Loading...'});
                 deferred.resolve(myWatchlistData);
             } else {
 
@@ -45,6 +45,7 @@
                         $ionicLoading.hide();
                     })
                     .error(function () {
+                        alert("please try again no internet");
                         console.log("Error via making http calls");
                         $ionicLoading.hide();
                         deferred.reject();

@@ -3,7 +3,10 @@
         <div class="bar bar-header item-input-inset">
             <label class="item-input-wrapper">
                 <i class="icon ion-ios7-search placeholder-icon"></i>
-                <input type="search" placeholder="Search"  value="{{scanResult.text}}">
+                <input type="search"
+                       placeholder="Search"
+                       value="{{scanResult.text}}"
+                       ui-sref="custom-search" />
             </label>
             <a class="button button-clear icon-right ion-ios7-barcode button-stable" ng-click="scan()"></a>
         </div>

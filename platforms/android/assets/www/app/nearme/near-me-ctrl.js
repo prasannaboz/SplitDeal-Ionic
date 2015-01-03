@@ -1,7 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('SplitDealApp').controller('NearMeCtrl', ['$stateParams', NearMeCtrl]);
+    angular
+        .module('SplitDealApp')
+        .controller('NearMeCtrl', ['$stateParams', NearMeCtrl]);
 
     function NearMeCtrl($StateParams) {
 

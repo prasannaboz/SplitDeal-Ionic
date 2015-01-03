@@ -4,8 +4,8 @@ angular
 
     .run(function ($ionicPlatform, DSCacheFactory) {
         $ionicPlatform.ready(function () {
-            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-            // for form inputs)
+            // Hide the accessory bar by default
+            // (remove this to show the accessory bar above the keyboard for form inputs)
             if (window.cordova && window.cordova.plugins.Keyboard) {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             }
@@ -16,7 +16,7 @@ angular
 
             DSCacheFactory("myWatchListCache", {
                 storageMode: "localStorage",
-                maxAge: 5000,
+                maxAge: 7000,
                 deleteOnExpire: "aggressive"
             });
             DSCacheFactory("staticCache", {storageMode: "localStorage"});
@@ -25,10 +25,16 @@ angular
 
     .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
-        $ionicConfigProvider.views.maxCache(10);
+        $ionicConfigProvider.views.maxCache(5);
+        $ionicConfigProvider.views.transition('ios');
+        $ionicConfigProvider.views.forwardCache(true);
+
+        $ionicConfigProvider.navBar.positionPrimaryButtons('left');
+        $ionicConfigProvider.navBar.positionSecondaryButtons('right');
+        $ionicConfigProvider.navBar.alignTitle('center');
 
         // note that you can also chain configs
-        $ionicConfigProvider.backButton.icon('ion-chevron-left');
+        $ionicConfigProvider.backButton.text('back').icon('ion-chevron-left');
         $ionicConfigProvider.tabs.position('bottom').style('standard');
 
 
@@ -37,29 +43,30 @@ angular
             .state('app', {
                 url: '/app/login',
                 templateUrl: 'app/login/login.html'
-
             })
-
             .state('signup', {
                 url: '/app/signup',
                 templateUrl: 'app/signup/signup.html'
-
             })
-
             .state('location-map', {
                 url: '/app/location-map/:id',
                 templateUrl: 'app/nearme/location-map.html'
-
             })
-
+            .state('refine', {
+                url: '/app/refine/',
+                templateUrl: 'app/refine/refine.html'
+            })
+            .state('custom-search', {
+                url: '/app/custom-search',
+                templateUrl: 'app/custom-search/custom-search.html'
+            })
+            //tabs-routing
+            // Each tab has its own nav history stack:
             .state('tab', {
                 url: "/tab",
                 abstract: true,
                 templateUrl: "app/layout/tabs.html"
             })
-
-
-            // Each tab has its own nav history stack:
             .state('tab.watchlist', {
                 url: '/watchlist',
                 views: {
@@ -84,11 +91,10 @@ angular
                     }
                 }
             })
-
             .state('tab.post', {
                 url: '/post',
                 views: {
-                    'tab-mydeals': {
+                    'tab-post': {
                         templateUrl: 'app/post/post.html'
                     }
                 }

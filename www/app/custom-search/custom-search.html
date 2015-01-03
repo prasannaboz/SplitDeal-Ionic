@@ -1,0 +1,57 @@
+<ion-view>
+    <ion-nav-bar>
+        <ion-nav-title>
+            <div class="bar bar-header item-input-inset">
+                <label class="item-input-wrapper">
+                    <i class="icon ion-ios7-search placeholder-icon"></i>
+                    <input type="search" placeholder="Search" value="{{scanResult.text}}" ui-sref="custom-search">
+                </label>
+                <a class="button button-clear icon-right ion-ios7-barcode button-stable" ng-click="scan()"></a>
+            </div>
+        </ion-nav-title>
+    </ion-nav-bar>
+
+    <ion-content>
+        <div class="item item-positive">
+            Search Options
+        </div>
+
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Type
+                </div>
+                <select>
+                    <option>Any</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Location
+                </div>
+                <select>
+                    <option selected>Any</option>
+                    <option>Current Location</option>
+
+                </select>
+            </label>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Category
+                </div>
+                <select>
+                    <option selected>Any</option>
+                    <option>Split Deal</option>
+                    <option>Deal 4 Share</option>
+                </select>
+            </label>
+
+        </div>
+
+    </ion-content>
+    <footer ng-include="'app/layout/tabs.html'">
+
+    </footer>
+</ion-view>
