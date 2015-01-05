@@ -51,15 +51,15 @@ angular
                 templateUrl: 'app/nearme/location-map.html'
             })
             .state('refine', {
-                url: '/app/refine',
+                url: '/tab/watchlist/refine',
                 templateUrl: 'app/refine/refine.html'
             })
             .state('custom-search', {
-                url: '/app/custom-search',
+                url: '/tab/watchlist/custom-search',
                 templateUrl: 'app/custom-search/custom-search.html'
             })
             .state('my-alert', {
-                url: '/app/my-alert',
+                url: '/tab/watchlist/my-alert',
                 templateUrl: 'app/my-alert/my-alert.html'
             })
             //tabs-routing
@@ -102,14 +102,14 @@ angular
                 }
             })
             .state('select-store', {
-                url: '/app/post/store',
+                url: '/tab/post/select-store',
                 templateUrl: 'app/post/select-store.html'
             })
             .state('sale-post', {
-                url: '/app/post/sale-post',
+                url: '/tab/post/sale-post',
                 templateUrl: 'app/post/sale-post.html'
             }).state('share-post', {
-                url: '/app/post/share-post',
+                url: '/tab/app/post/share-post',
                 templateUrl: 'app/post/share-post.html'
             })
 

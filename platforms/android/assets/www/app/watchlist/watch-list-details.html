@@ -1,5 +1,4 @@
 <ion-view ng-controller="WatchListDetailCtrl as vm">
-
     <ion-nav-bar class="bar bar-header bar-stable">
         <ion-nav-back-button class="button button-clear">
             <i class="ion-chevron-left"></i> back
@@ -8,10 +7,9 @@
             <a class="button button-clear ion-ios7-location-outline"
                ui-sref="tab.location-map({id:vm.itemId})">Map View </a>
         </ion-nav-title>
-        <ion-nav-buttons side="secondary">
+        <ion-nav-buttons side="right">
             <a class="button button-clear" ui-sref="refine"> Refine</a>
         </ion-nav-buttons>
-
     </ion-nav-bar>
 
     <ion-content>
