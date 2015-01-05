@@ -1,33 +1,31 @@
-<ion-view view-title="Post?" ng-controller="PostCtrl">
+<ion-view ng-controller="PostCtrl">
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button class="button button-clear">
+            <i class="ion-chevron-left"></i> back
+        </ion-nav-back-button>
+        <ion-nav-title>Post?</ion-nav-title>
+    </ion-nav-bar>
+
     <ion-content>
         <div class="list">
             <div class="item item-divider item-positive">
                 Select Deal Option
             </div>
 
-            <label class="item item-radio text-center">
-                <input type="radio" name="group">
-                <div class="item-content">
-                   Deal 4 share
-                </div>
-                <i class="radio-icon ion-checkmark"></i>
-            </label>
-
-            <label class="item item-radio text-center">
-                <input type="radio" name="group">
-                <div class="item-content">
-                    Split Deal
-                </div>
-                <i class="radio-icon ion-checkmark"></i>
-            </label>
-
-            <label class="item item-radio text-center">
-                <input type="radio" name="group">
-                <div class="item-content">
+            <div class="text-center">
+                <a class="item item-icon-right"
+                   ui-sref="select-store">
+                    Deal 4 Share
+                </a>
+                <a class="item item-icon-right"
+                   href="#">
+                   Split Deal
+                </a>
+                <a class="item item-icon-right"
+                   href="#">
                     Classified
-                </div>
-                <i class="radio-icon ion-checkmark"></i>
-            </label>
+                </a>
+            </div>
 
         </div>
     </ion-content>

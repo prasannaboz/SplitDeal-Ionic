@@ -1,22 +1,29 @@
 (function () {
     'use strict';
-    angular.module('SplitDealApp')
-        .controller('WatchListDetailCtrl', ['$stateParams', 'splitDealApi', WatchListDetailCtrl]);
+    angular
+        .module('SplitDealApp')
+        .controller('WatchListDetailCtrl',WatchListDetailCtrl);
 
-    function WatchListDetailCtrl($stateParams, splitDealApi) {
+    WatchListDetailCtrl.$inject = ['$stateParams', '$state', 'splitDealApi'];
+
+    function WatchListDetailCtrl($stateParams, $state, splitDealApi) {
 
         var vm = this;
-        //console.log("$stateParams", $stateParams);
+
+        vm.gotoRefine = gotoRefine ;
         vm.itemId = $stateParams.id;
 
-        //console.log("Item Id", vm.itemId);
+
+        function gotoRefine() {
+            $state.go('refine');
+        }
 
         splitDealApi.getMyWatchList().then(function (data) {
 
             vm.itemDetail = _(data.Result).chain()
-                            .find({'Id':vm.itemId})
-                            .pick('ItemDescription','Location','ItemName','ModifiedAt')
-                            .value();
+                .find({'Id': vm.itemId})
+                .pick('ItemDescription', 'Location', 'ItemName', 'ModifiedAt')
+                .value();
         });
     }
 

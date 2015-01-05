@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view ng-controller="CustomSearchCtrl">
     <ion-nav-bar>
         <ion-nav-title>
             <div class="bar bar-header item-input-inset">
@@ -17,16 +17,16 @@
         </div>
 
         <div class="list">
-            <label class="item item-input item-select">
+            <div class="item item-input item-select">
                 <div class="input-label">
                     Type
                 </div>
                 <select>
                     <option>Any</option>
                 </select>
-            </label>
+            </div>
 
-            <label class="item item-input item-select">
+            <div class="item item-input item-select">
                 <div class="input-label">
                     Location
                 </div>
@@ -35,9 +35,9 @@
                     <option>Current Location</option>
 
                 </select>
-            </label>
+            </div>
 
-            <label class="item item-input item-select">
+            <div class="item item-input item-select">
                 <div class="input-label">
                     Category
                 </div>
@@ -46,12 +46,15 @@
                     <option>Split Deal</option>
                     <option>Deal 4 Share</option>
                 </select>
-            </label>
+            </div>
 
+            <div class="bar bar-balanced">
+                <a class="button button-clear">Search</a>
+                <a class="button button-clear">Reset</a>
+            </div>
         </div>
 
+        <footer ng-include="'app/layout/tabs.html'"></footer>
     </ion-content>
-    <footer ng-include="'app/layout/tabs.html'">
 
-    </footer>
 </ion-view>

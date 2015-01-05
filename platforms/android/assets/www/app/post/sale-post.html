@@ -1,0 +1,48 @@
+<ion-view>
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button class="button button-clear">
+            <i class="ion-chevron-left"></i> back
+        </ion-nav-back-button>
+        <ion-nav-title>Best Buy</ion-nav-title>
+    </ion-nav-bar>
+
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider item-positive">
+                Whats on sale?
+            </div>
+
+            <label class="item item-input">
+                <span class="input-label">Title</span>
+                <input type="text" placeholder="title">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Category</span>
+                <input type="Text" >
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Description</span>
+                <input type="text" >
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Sale End Date</span>
+                <input type="date" >
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Keyword</span>
+                <input type="date">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Attach a photo</span>
+                <input type="date">
+            </label><br>
+
+            <div align="center">
+                <a ui-sref="share-post" class="button button-outline button-positive">
+                    Post
+                </a>
+            </div>
+        </div>
+        <footer ng-include="'app/layout/tabs.html'"></footer>
+    </ion-content>
+</ion-view>

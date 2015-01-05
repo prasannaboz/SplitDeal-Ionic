@@ -1,53 +1,54 @@
 <ion-view ng-controller="WatchListDetailCtrl as vm">
-    <ion-nav-bar class="bar-stable">
+
+    <ion-nav-bar class="bar bar-header bar-stable">
         <ion-nav-back-button class="button button-clear">
             <i class="ion-chevron-left"></i> back
         </ion-nav-back-button>
         <ion-nav-title>
             <a class="button button-clear ion-ios7-location-outline"
-               ui-sref="tab.location-map({id:vm.itemId})">
-                Map View </a>
+               ui-sref="tab.location-map({id:vm.itemId})">Map View </a>
         </ion-nav-title>
-    </ion-nav-bar>
+        <ion-nav-buttons side="secondary">
+            <a class="button button-clear" ui-sref="refine"> Refine</a>
+        </ion-nav-buttons>
 
-    <ion-nav-buttons side="secondary">
-        <button class="button button-clear" ng-click="doSomething()">
-            Refine
-        </button>
-    </ion-nav-buttons>
+    </ion-nav-bar>
 
     <ion-content>
         <div class="list">
             <div class="item item-divider item-positive item-button-right">
                 Result for
                 <button class="button button-light button-clear">
-                    <small>4 found | sort </small>
+                    <small>4 found | sort</small>
                 </button>
             </div>
         </div>
 
-        <div class="list card" ng-model="vm.itemDetail">
-            <div class="item ">
+        <div class="list" ng-model="vm.itemDetail">
+            <div class="item">
                 <h2>{{vm.itemDetail.ItemName}}</h2>
 
-                <p>Location: {{vm.itemDetail.Location}}</p>
-
-                <p>{{vm.itemDetail.ModifiedAt | date:'medium'}}</p>
-            </div>
-            <div class="item item-body">
-                <p>Description: {{vm.itemDetail.ItemDescription}}</p>
+                <p>{{vm.itemDetail.ItemDescription}}</p>
             </div>
         </div>
 
+        <div class="bar bar-dark">
+            <a ui-sref="my-alert" class="button button-clear"> Set up Alert </a>
+        </div>
+
         <div class="list">
-            <div class="item item-divider item-stable item-button-right">
-                Set up Alert
-            </div>
+
             <div class="item item-divider item-positive item-button-right">Other Web Site</div>
-            <a class="item item-icon-right">
-                Kijiji
+            <a class="item item-icon-right"
+               href="#"> Kijiji
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </a>
+
+            <a class="item item-icon-right"
+               href="#">UsedOttawa
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+
         </div>
 
     </ion-content>

@@ -25,9 +25,8 @@ angular
 
     .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
-        $ionicConfigProvider.views.maxCache(5);
         $ionicConfigProvider.views.transition('ios');
-        $ionicConfigProvider.views.forwardCache(true);
+        $ionicConfigProvider.views.forwardCache(false);
 
         $ionicConfigProvider.navBar.positionPrimaryButtons('left');
         $ionicConfigProvider.navBar.positionSecondaryButtons('right');
@@ -36,7 +35,6 @@ angular
         // note that you can also chain configs
         $ionicConfigProvider.backButton.text('back').icon('ion-chevron-left');
         $ionicConfigProvider.tabs.position('bottom').style('standard');
-
 
         $stateProvider
             // setup an abstract state for the tabs directive
@@ -53,12 +51,16 @@ angular
                 templateUrl: 'app/nearme/location-map.html'
             })
             .state('refine', {
-                url: '/app/refine/',
+                url: '/tab/watchlist/refine',
                 templateUrl: 'app/refine/refine.html'
             })
             .state('custom-search', {
-                url: '/app/custom-search',
+                url: '/tab/watchlist/custom-search',
                 templateUrl: 'app/custom-search/custom-search.html'
+            })
+            .state('my-alert', {
+                url: '/tab/watchlist/my-alert',
+                templateUrl: 'app/my-alert/my-alert.html'
             })
             //tabs-routing
             // Each tab has its own nav history stack:
@@ -99,6 +101,19 @@ angular
                     }
                 }
             })
+            .state('select-store', {
+                url: '/tab/post/select-store',
+                templateUrl: 'app/post/select-store.html'
+            })
+            .state('sale-post', {
+                url: '/tab/post/sale-post',
+                templateUrl: 'app/post/sale-post.html'
+            }).state('share-post', {
+                url: '/tab/app/post/share-post',
+                templateUrl: 'app/post/share-post.html'
+            })
+
+
             .state('tab.nearme', {
                 url: '/nearme',
                 views: {
@@ -124,9 +139,6 @@ angular
                 }
             });
 
-
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/app/login');
-
-
     });

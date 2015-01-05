@@ -1,25 +1,55 @@
-<ion-view ng-controller="RefineCtrl as vm" >
-    <ion-nav-bar>
-        <ion-nav-back-button class="button-clear">
+<ion-view>
+    <ion-nav-bar class="bar bar-header bar-stable">
+        <ion-nav-back-button class="button button-clear">
             <i class="ion-chevron-left"></i> back
         </ion-nav-back-button>
-
         <ion-nav-title>
-            <a class="button button-clear ion-navicon-round">
-               Refine</a>
+            Refine Your Search
         </ion-nav-title>
-
-        <ion-nav-buttons side="secondary">
-            <button class="button button-clear" ng-click="doSomething()">
-                Refine
-            </button>
-        </ion-nav-buttons>
-
     </ion-nav-bar>
-    <ion-content >
-        <h1>
-            Custom Search
-        </h1>
+    <ion-content>
+        <div class="item item-positive">
+            Search Options
+        </div>
 
+        <div class="list">
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    Type
+                </div>
+                <select>
+                    <option>Any</option>
+                </select>
+            </div>
+
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    Location
+                </div>
+                <select>
+                    <option selected>Any</option>
+                    <option>Current Location</option>
+
+                </select>
+            </div>
+
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    Category
+                </div>
+                <select>
+                    <option selected>Any</option>
+                    <option>Split Deal</option>
+                    <option>Deal 4 Share</option>
+                </select>
+            </div>
+
+            <div class="bar bar-balanced">
+
+                <a class="button button-clear">Refine</a>
+            </div>
+        </div>
+
+        <ion-footer-bar ng-include="'app/layout/tabs.html'"></ion-footer-bar>
     </ion-content>
 </ion-view>
