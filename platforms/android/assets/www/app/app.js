@@ -109,7 +109,7 @@ angular
                 url: '/tab/post/sale-post',
                 templateUrl: 'app/post/sale-post.html'
             }).state('share-post', {
-                url: '/tab/app/post/share-post',
+                url: '/tab/post/share-post',
                 templateUrl: 'app/post/share-post.html'
             })
 
